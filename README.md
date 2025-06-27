@@ -1,5 +1,5 @@
 # 🧠 Creating a Compute Module in Function Execution Mode on Palantir Foundry
-
+[Palantir](https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/palantir-xdp5vzpsdiuov68zwbgn.png/palantir-4vc1iawq4sqw5r2jh1n7cr.png?_a=DATAdtAAZAA0)
 This guide walks you through the step-by-step process of setting up a Compute Module using **Function Execution mode** in **Palantir Foundry** using a Python-based Docker container.
 
 ---
