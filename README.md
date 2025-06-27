@@ -177,19 +177,3 @@ Output:
 ```
 
 ---
-
-## 🔐 Notes
-- Your image must target `linux/amd64` architecture
-- Keep functions stateless and predictable
-- Name inputs/outputs clearly
-- Avoid hardcoded credentials; use environment variables if needed
-
----
-
-## 📎 Resources
-- [Palantir Foundry Docs](https://www.palantir.com/platform/foundry/)
-- [foundry-compute-modules on PyPI](https://pypi.org/project/foundry-compute-modules/)
-
----
-
-Happy building! 🛠️
