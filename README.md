@@ -119,4 +119,77 @@ docker push mixite-container-registry.palantirfoundry.com/<image_name>:<tag>
 
 ### 13. Verify Detected Functions
 - Go to the **Functions** tab
-- You should see functions from your cont
+- You should see functions from your container listed
+
+---
+
+### 14. Import and Configure Function Inputs
+- Click **Import** for each function
+- Edit each function to add input parameters
+- Example:
+  - Input: `x` (float), `y` (float)
+  - These must match the keys used inside your code’s `events` dict
+- Set the output format
+- Click **Update**
+
+📝 **Note:** When calling these functions in Foundry, you must provide all required parameters inside the `events` dictionary.
+
+---
+
+### 15. Test Your Functions
+- Go to **Overview → Query**
+- Select a function
+- Provide example input JSON
+- Click **Run** to test
+
+---
+
+### 16. Register in Ontology Manager
+- Go to **Ontology Manager → Functions**
+- Search for your function name
+- It can now be used anywhere in Foundry
+
+---
+
+## ✅ Example Function: Add Two Numbers
+
+```python
+@function
+def add_numbers(events):
+    x = float(events["x"])
+    y = float(events["y"])
+    return {"sum": x + y}
+```
+
+Input:
+```json
+{
+  "x": 2.5,
+  "y": 3.5
+}
+```
+
+Output:
+```json
+{
+  "sum": 6.0
+}
+```
+
+---
+
+## 🔐 Notes
+- Your image must target `linux/amd64` architecture
+- Keep functions stateless and predictable
+- Name inputs/outputs clearly
+- Avoid hardcoded credentials; use environment variables if needed
+
+---
+
+## 📎 Resources
+- [Palantir Foundry Docs](https://www.palantir.com/platform/foundry/)
+- [foundry-compute-modules on PyPI](https://pypi.org/project/foundry-compute-modules/)
+
+---
+
+Happy building! 🛠️
