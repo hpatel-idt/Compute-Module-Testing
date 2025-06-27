@@ -16,3 +16,25 @@ WORKDIR /app
 COPY . /app
 RUN pip install -r requirements.txt
 CMD ["foundry_compute_modules.entrypoint"]
+
+### 1. Create a Docker Container with a Python Application
+Structure your Python project and create a `Dockerfile` to containerize it.
+
+Example:
+```Dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+CMD ["foundry_compute_modules.entrypoint"]
+
+### 1. Create a Docker Container with a Python Application
+Structure your Python project and create a `Dockerfile` to containerize it.
+
+Example:
+```Dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+CMD ["foundry_compute_modules.entrypoint"]
